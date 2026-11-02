@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Installation Task</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1a1a2e, #0f0f1a 80%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: #ffffff;
+    }
+
+    .card {
+      background: rgba(26, 26, 46, 0.95);
+      border: 1px solid #ff7b00;
+      box-shadow: 0 0 25px rgba(255, 123, 0, 0.25);
+      border-radius: 16px;
+      max-width: 420px;
+      width: 100%;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 123, 0, 0.15);
+      color: #ff9d00;
+      border: 1px solid #ff7b00;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #ffffff;
+      line-height: 1.4;
+    }
+
+    p.subtitle {
+      font-size: 14px;
+      color: #b0b3c6;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .steps-box {
+      background: #141423;
+      border: 1px solid #2a2a42;
+      border-radius: 10px;
+      padding: 14px;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .steps-box ol {
+      padding-left: 20px;
+      font-size: 13px;
+      color: #d1d5db;
+      line-height: 1.8;
+    }
+
+    .steps-box ol li strong {
+      color: #00ffaa;
+    }
+
+    .btn-install {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      background: linear-gradient(135deg, #00b09b, #96c93d);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 176, 155, 0.4);
+      transition: all 0.25s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .btn-install:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(0, 176, 155, 0.65);
+    }
+
+    .btn-install:active {
+      transform: scale(0.98);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 176, 155, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 12px rgba(0, 176, 155, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 176, 155, 0);
+      }
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="badge">Task Required</div>
+    <h1>Complete Installation to Unlock</h1>
+    <p class="subtitle">Niche diye gaye button par click karke app ko download aur install karein reward unlock karne ke liye.</p>
+
+    <div class="steps-box">
+      <ol>
+        <li>Niche <strong>Install Now</strong> par click karein.</li>
+        <li>App download karke install karein.</li>
+        <li>App ko open karke 30 seconds wait karein.</li>
+      </ol>
+    </div>
+
+    <!-- Apna direct CPA, affiliate, ya app link yahan paste karein -->
+    <a href="https://your-download-link.com" class="btn-install" id="installBtn" target="_blank">
+      INSTALL NOW
+    </a>
+
+    <div class="footer-note">
+      100% Secure &amp; Verified Task
+    </div>
+  </div>
+
+  <script>
+    // Button click handle karne ke liye (agar koi extra tracking ya redirect delay add karna ho)
+    const installButton = document.getElementById('installBtn');
+    
+    installButton.addEventListener('click', function(e) {
+      // Yahan par target URL ko directly bhi set kar sakte hain:
+      const targetUrl = "https://your-download-link.com"; // <-- Apna link yahan daalein
+      this.href = targetUrl;
+    });
+  </script>
+
+</body>
+</html>
