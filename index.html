@@ -12,65 +12,102 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
     body {
-      background: radial-gradient(circle at top, #1a1a2e, #0f0f1a 80%);
+      background: radial-gradient(circle at top, #1a1a2e, #0a0a14 90%);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 16px 10px;
       color: #ffffff;
     }
     .card {
-      background: rgba(26, 26, 46, 0.95);
+      background: rgba(20, 20, 35, 0.96);
       border: 1px solid #ff7b00;
-      box-shadow: 0 0 25px rgba(255, 123, 0, 0.25);
-      border-radius: 16px;
-      max-width: 420px;
+      box-shadow: 0 0 30px rgba(255, 123, 0, 0.3);
+      border-radius: 18px;
+      max-width: 480px;
       width: 100%;
-      padding: 24px 20px;
+      padding: 22px 16px;
       text-align: center;
+    }
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
     }
     .badge {
       display: inline-block;
       background: rgba(255, 123, 0, 0.15);
       color: #ff9d00;
       border: 1px solid #ff7b00;
-      padding: 5px 14px;
+      padding: 4px 12px;
       border-radius: 20px;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 14px;
-      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
     }
+    /* Live Watching Counter */
+    .live-tag {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #ef4444;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background: #ef4444;
+      border-radius: 50%;
+      animation: blink 1s infinite alternate;
+    }
+    @keyframes blink {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
     h1 {
-      font-size: 20px;
-      margin-bottom: 8px;
+      font-size: 21px;
+      margin-bottom: 6px;
+      line-height: 1.3;
     }
     p.subtitle {
       font-size: 13px;
       color: #b0b3c6;
       margin-bottom: 16px;
     }
+
+    /* Bada Wide Video Box */
     .video-box {
       width: 100%;
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
-      margin-bottom: 18px;
-      border: 1px solid #ff7b00;
+      margin-bottom: 16px;
+      border: 2px solid #ff7b00;
       background: #000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
     }
     .video-box video {
       width: 100%;
-      max-height: 230px;
+      aspect-ratio: 16 / 9;
+      height: auto;
       display: block;
+      object-fit: cover;
     }
+
     .steps-box {
       background: #141423;
       border: 1px solid #2a2a42;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 12px 16px;
       text-align: left;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
     .steps-box ol {
       padding-left: 18px;
@@ -81,44 +118,107 @@
     .steps-box ol li strong {
       color: #00ffaa;
     }
+
     .btn-install {
       display: block;
       width: 100%;
       padding: 14px;
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 800;
       color: #ffffff;
       background: linear-gradient(135deg, #00b09b, #96c93d);
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       cursor: pointer;
       text-decoration: none;
       text-align: center;
       animation: pulse 2s infinite;
+      box-shadow: 0 4px 15px rgba(0, 176, 155, 0.4);
     }
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(0, 176, 155, 0.7); }
-      70% { box-shadow: 0 0 0 12px rgba(0, 176, 155, 0); }
+      70% { box-shadow: 0 0 0 14px rgba(0, 176, 155, 0); }
       100% { box-shadow: 0 0 0 0 rgba(0, 176, 155, 0); }
+    }
+
+    /* Realistic Live Comments */
+    .comments-section {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #27273f;
+      text-align: left;
+    }
+    .comments-title {
+      font-size: 13px;
+      color: #9ca3af;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .comment-item {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+    .avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #ff7b00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    .comment-body {
+      background: #151525;
+      padding: 8px 12px;
+      border-radius: 8px;
+      width: 100%;
+      border: 1px solid #23233a;
+    }
+    .comment-user {
+      font-weight: 700;
+      color: #60a5fa;
+      margin-bottom: 2px;
+    }
+    .comment-text {
+      color: #e5e7eb;
+    }
+    .comment-time {
+      color: #6b7280;
+      font-size: 10px;
+      margin-top: 2px;
     }
     .footer-note {
       margin-top: 14px;
-      font-size: 12px;
+      font-size: 11px;
       color: #6b7280;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
   <div class="card">
-    <div class="badge">TASK REQUIRED</div>
+    <div class="header-bar">
+      <div class="badge">TASK REQUIRED</div>
+      <div class="live-tag">
+        <span class="live-dot"></span>
+        <span id="watcherCount">1,324</span> Watching
+      </div>
+    </div>
+
     <h1>Complete Installation to Unlock</h1>
     <p class="subtitle">Niche diye gaye video ko dekhein aur app install karein.</p>
 
-    <!-- Video Box (Autoplay OFF, direct controls) -->
+    <!-- Bada Wide Video Area (Autoplay OFF) -->
     <div class="video-box">
       <video controls playsinline preload="metadata">
-        <source src="tutorial.mp4" type="video/mp4">
+        <source src="video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -131,15 +231,65 @@
       </ol>
     </div>
 
-    <!-- Aapka CPA link -->
+    <!-- Direct CPA Link -->
     <a href="https://www.cdnflair.com/view.php?id=5546832&pub=3361737" class="btn-install" target="_blank">
       INSTALL NOW
     </a>
+
+    <!-- Comments Section -->
+    <div class="comments-section">
+      <div class="comments-title">
+        <span>Recent User Activity</span>
+        <span style="color: #00ffaa;">● Verified</span>
+      </div>
+
+      <div class="comment-item">
+        <div class="avatar" style="background: #2563eb;">A</div>
+        <div class="comment-body">
+          <div class="comment-user">Aman Sharma</div>
+          <div class="comment-text">100% working bhai! 30 second wait karne ke baad turant mil gaya 🔥</div>
+          <div class="comment-time">1 min ago</div>
+        </div>
+      </div>
+
+      <div class="comment-item">
+        <div class="avatar" style="background: #10b981;">R</div>
+        <div class="comment-body">
+          <div class="comment-user">Rahul FF Gamer</div>
+          <div class="comment-text">Bhai mera unlock ho gaya... thanks a lot yaar ❤️</div>
+          <div class="comment-time">3 min ago</div>
+        </div>
+      </div>
+
+      <div class="comment-item">
+        <div class="avatar" style="background: #f59e0b;">S</div>
+        <div class="comment-body">
+          <div class="comment-user">Sameer Khan</div>
+          <div class="comment-text">Pehle laga fake hai par app install karte hi claim ho gaya!</div>
+          <div class="comment-time">5 min ago</div>
+        </div>
+      </div>
+    </div>
 
     <div class="footer-note">
       100% Secure &amp; Verified Task
     </div>
   </div>
+
+  <script>
+    // Live Watching Counter script: automatic kam-jyada hota rahega
+    let count = 1324;
+    const countElement = document.getElementById('watcherCount');
+
+    setInterval(() => {
+      // -3 se +4 ke beech random change
+      const change = Math.floor(Math.random() * 8) - 3;
+      count += change;
+      if (count < 1290) count = 1310;
+      if (count > 1380) count = 1335;
+      countElement.innerText = count.toLocaleString();
+    }, 2500);
+  </script>
 
 </body>
 </html>
